@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  focalboard:
+    image: mattermost/focalboard
+    container_name: focalboard
+    ports:
+      - "80:8000"
+    volumes:
+      - ./config:/opt/focalboard/config
+    restart: unless-stopped
